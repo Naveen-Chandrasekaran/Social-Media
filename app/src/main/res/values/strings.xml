@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Social Media</string>
+    <string name="post">Post</string>
+    <string name="what_s_on_your_mind">What\'s on your mind?</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="click_here_to_register">Click Here to Register</string>
+    <string name="login_page">Login Page</string>
+    <string name="name">Name</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="save_profile">Save Profile</string>
+
+
+</resources>
