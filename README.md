@@ -1,4 +1,4 @@
-This is a Social Media App like Twitter but contains only basic functinalites like user authentication, post creation,etc.
+This is a Social Media App like Twitter but contains only basic functinalites like user authentication, post creation, etc.
 
 # Screenshots
 ![Screenshot_20240813-232036_Social Media](https://github.com/user-attachments/assets/3ec7ce3c-7306-40b7-b3fb-c5b896727da7)
@@ -10,3 +10,6 @@ This is a Social Media App like Twitter but contains only basic functinalites li
 # Technology Used
 Java
 Xml
+
+# IDLE Used
+Android Studio
