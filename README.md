@@ -6,6 +6,10 @@ This is a Social Media App like Twitter but contains only basic functinalites li
 ![Screenshot_20240813-232159_Social Media](https://github.com/user-attachments/assets/e4bd794f-554e-4561-8e12-00491195a5a8)
 ![Screenshot_20240813-232207_Social Media](https://github.com/user-attachments/assets/a22b71c8-77cb-47a0-890a-b8677cf4189c)
 
+# Features
+User Authentication: Implemented secure user login and registration processes.
+Text and Image Upload: Enabled users to create and share text-based posts and upload images.
+Data Storage: Utilized SharedPreferences for storing user credentials and media URIs.
 
 # Technology Used
 Java
