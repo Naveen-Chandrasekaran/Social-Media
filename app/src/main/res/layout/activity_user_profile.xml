@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edittext_bg"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".UserProfileActivity">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/cardview_background"
+       >
+
+       <TextView
+           android:id="@+id/profile_username"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="30dp"
+           android:fontFamily="sans-serif-condensed-medium"
+           android:padding="20dp"
+           android:text="@string/username"
+           android:textColor="@color/white"
+           android:textSize="20sp"
+           android:textStyle="bold" />
+
+       <Button
+           android:id="@+id/follow_button"
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:text="@string/follow"
+           android:layout_margin="30dp"
+           android:textColor="@color/color1"
+           android:textSize="16sp"
+           android:backgroundTint="@color/white"
+           />
+
+   </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/your_profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cardview_background"
+        android:layout_marginTop="10dp"
+        android:padding="28dp"
+        >
+        <Button
+            android:id="@+id/your_details"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textColor="@color/color1"
+            android:layout_marginRight="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="16sp"
+            android:backgroundTint="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/your_followers"
+            android:layout_toRightOf="@+id/your_details"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="Followers"
+            android:textColor="@color/color1"
+            android:textSize="16sp"
+            android:backgroundTint="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/profile_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/your_details"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:padding="20dp"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
