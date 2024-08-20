@@ -1,6 +1,7 @@
 package com.example.socialmedia;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -19,7 +20,6 @@ public class FeedActivity extends AppCompatActivity {
     private AppDatabase db;
     private PostAdapter adapter;
     private ActivityResultLauncher<Intent> postActivityLauncher;
-    private LiveData<List<Post>> postsLiveData;
     private String username;
 
     @Override
@@ -28,11 +28,17 @@ public class FeedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_feed);
 
         Button newPostButton = findViewById(R.id.new_post_button);
+        Button yourProfileButton=findViewById(R.id.your_profile_button);
         ListView feedListView = findViewById(R.id.feed_list);
 
         db = AppDatabase.getDatabase(this);
-        postsLiveData = db.postDao().getAllPosts();  // Obtain LiveData
+        LiveData<List<Post>> postsLiveData = db.postDao().getAllPosts();  // Obtain LiveData
         username = getIntent().getStringExtra("username");
+
+        SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("currentUsername", username);
+        editor.apply();  // Commit changes
 
         adapter = new PostAdapter(this, new ArrayList<>());
         feedListView.setAdapter(adapter);
@@ -73,6 +79,12 @@ public class FeedActivity extends AppCompatActivity {
             Intent intent = new Intent(FeedActivity.this, PostDetailActivity.class);
             intent.putExtra("post_id", selectedPost.getId()); // Pass post ID to detail activity
             startActivity(intent);
+        });
+
+        yourProfileButton.setOnClickListener(view -> {
+            Intent in = new Intent(FeedActivity.this,UserProfileActivity.class);
+            in.putExtra("profile","your_profile");
+            startActivity(in);
         });
     }
 }

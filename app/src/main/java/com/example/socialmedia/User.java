@@ -1,4 +1,5 @@
 package com.example.socialmedia;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 @Entity(tableName = "users")
@@ -31,4 +32,8 @@ public class User {
     public void setProfilePhotoUri(String profilePhotoUri) {
         this.profilePhotoUri = profilePhotoUri;
     }
+
+
 }
+
+

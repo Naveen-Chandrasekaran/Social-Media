@@ -6,10 +6,12 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {User.class, Post.class}, version = 2)  // Increment the version number
+@Database(entities = {User.class, Post.class, Follower.class}, version = 3)  // Increment the version number
 public abstract class AppDatabase extends RoomDatabase {
     public abstract UserDao userDao();
     public abstract PostDao postDao();
+
+    public abstract FollowerDao followerDao();
 
     private static volatile AppDatabase INSTANCE;
 
